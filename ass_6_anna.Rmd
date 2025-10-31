@@ -1,0 +1,22 @@
+---
+title: "Untitled"
+author: "annagloria"
+date: "2025-10-31"
+output: html_document
+---
+# *Influence of Distance from Forest Edges on Spontaneous Vegetation Succession Following Small-Scale Gold Mining in the Southeast Peruvian Amazon*
+
+## **Methods**
+![Geographic location]("C:/Users/annag/OneDrive - unige.it/Desktop/amazon_pic.png")
+
+## **Results**
+
+## **Conclusion**
+
+
+
+
+```{git config --global commit.gpgsign false}
+
+
+```
