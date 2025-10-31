@@ -16,7 +16,5 @@ output: html_document
 
 
 
-```{git config --global commit.gpgsign false}
 
 
-```
