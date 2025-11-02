@@ -26,6 +26,8 @@ Twenty abandoned mining areas were selected to establish a 23-year chronosequenc
 
 ![Geographic location](C:\Users\annag\OneDrive - unige.it\Desktop\r_markdown_anna\amazon_pic.png)
 
+*Figure 1: Geographic location of the study area in Madre de Dios, Peru.*
+
 ## 2.2 Sampling and Vegetation Structure
 Vegetation was sampled in 20 plots (10 × 25 m). All individuals with DBH >1 cm were measured for diameter and total height. Botanical specimens were collected and stored at the Alwyn Gentry Herbarium (HAG).  
 
@@ -38,8 +40,20 @@ Statistical analyses included square root transformation of variables, hierarchi
 
 
 ## **Results and Conclusion**
+```{r}
+ plants_df <-read.csv("fake_data.csv")
+head(plants_df)
+library(ggplot2)
+ggplot(plants_df,aes(x=Plots,y=Species_richness)+
+  geom_point()
+```
+
 
 ![Geographic location](C:\Users\annag\OneDrive - unige.it\Desktop\r_markdown_anna\result.png)
+*Figure 2 :The density and average height of individuals according to diameter categories of the
+vegetation in study areas. DBH = diameter at breast height*
+
+
 
 
 
@@ -49,9 +63,9 @@ Statistical analyses included square root transformation of variables, hierarchi
 •	Results and Conclusion Some of the main results and whether the aims were met and what the authors found.
 
 6.	You will also need to include an image/graphic/figure, with a caption. Reference the figure in your text. 
-You can import an image that was used in the original article. Alternatively, you can create your
+You can import an image that was used in the original article. Alur
  
-own figure in RMarkdown that can be displayed. This is just to check that you have understood how chunks work, so please do not go overboard. Instead, try and convey a very simple message about the paper - you can use completely fake data for example.
+his is just to check that you have understood how chunks work, so please do not go overboard. Instead, try and convey a very simple message about the paper - you can use completely fake data for example.
 
 
 
