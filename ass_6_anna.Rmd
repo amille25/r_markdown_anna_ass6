@@ -1,17 +1,59 @@
+
 ---
-title: "Untitled"
-author: "annagloria"
+title: "R markdown assignment"
+author: "Anna Gloria Millefanti"
 date: "2025-10-31"
 output: html_document
 ---
-# *Influence of Distance from Forest Edges on Spontaneous Vegetation Succession Following Small-Scale Gold Mining in the Southeast Peruvian Amazon*
+# **Reference**
+Y., Alarcon-Aguirre, G., Herrera-Machaca, M., Hilares Vargas, L., Corvera Gomringer, R., & del Castillo Torres, D. (2023). Influence of Distance from Forest Edges on Spontaneous Vegetation Succession Following Small-Scale Gold Mining in the Southeast Peruvian Amazon. Diversity, 15(6), 793. https://doi.org/10.3390/d15060793
 
-## **Methods**
-![Geographic location]("C:/Users/annag/OneDrive - unige.it/Desktop/amazon_pic.png")
+# **Abstract**
+This article presents an investigation conducted in an abandoned gold mining area in the Peruvian Amazon, aiming to quantify the effects of time on vegetation regeneration, as the sites were abandoned at different moments. The study reveals significant differences in successional stages depending on the abandonment period, showing that natural restoration alone is too slow to rehabilitate the area. Therefore, active restoration measures are recommended to promote effective ecological recovery.
 
-## **Results**
+# **Introduction**
 
-## **Conclusion**
+Mining supports the global economy but causes habitat loss, soil degradation, and threats to biodiversity, especially in the Amazon. In Madre de Dios, Peru, artisanal gold mining (ASGM) is a major driver of environmental disturbance.
+Natural regeneration (spontaneous succession) can restore forests without human intervention. Its success depends on soil quality, seed availability, distance from forest edges, and time since abandonment. Areas closer to forests recover faster and have higher species diversity.
+Chronosequence studies help track succession over time. While secondary succession is well-studied in agricultural lands, research on abandoned gold-mining sites in the Peruvian Amazon is limited. This study examines how distance to forest edges and abandonment time influence early natural regeneration, providing insights for restoration practices.
+
+# **Materials and Methods**
+
+## 2.1 Study Area
+The study was conducted in abandoned gold mining areas in the San Jacinto native community, Madre de Dios, southeastern Peruvian Amazon (coordinates: 12°31'34.22" S, 69°23'45.77" W), 35 km northeast of Puerto Maldonado. Average annual temperature is 25.4 °C and precipitation 2120 mm, with a dry season from June to September.  
+
+Twenty abandoned mining areas were selected to establish a 23-year chronosequence, including initial (<5 years), intermediate (5–10 years), and advanced (>10 years) successional stages. Gold extraction involved open-pit mining, removing all vegetation and soil, leading to disturbed substrates with limited natural recolonization. The original forest was low-terrace rainforest with emergent trees up to 45 m, dominated by species such as *Bertholletia excelsa*, *Pseudolmedia laevis*, *Iriartea deltoidea*, *Poulsenia armata*, *Quararibea wittii*, *Astrocaryum murumuru*, and *Euterpe precatoria*.  
+
+![Geographic location](C:\Users\annag\OneDrive - unige.it\Desktop\r_markdown_anna\amazon_pic.png)
+
+## 2.2 Sampling and Vegetation Structure
+Vegetation was sampled in 20 plots (10 × 25 m). All individuals with DBH >1 cm were measured for diameter and total height. Botanical specimens were collected and stored at the Alwyn Gentry Herbarium (HAG).  
+
+Woody plants were classified by development stage: seedlings (1–<5 cm DBH), saplings (5–<10 cm), and trees (>10 cm). Diameter classes (5 cm ranges) and average height were used to describe vegetation structure across the four abandonment stages. Scientific names were verified using TNRS.  
+
+## 2.3 Data Analysis
+Statistical analyses included square root transformation of variables, hierarchical partitioning (R package *hier.part*), non-metric multidimensional scaling (nMDS), SIMPROF for floristic grouping, and distance-based redundancy analysis (dbRDA) with variance partitioning (*rdacca.hp* package). All analyses were conducted at a 5% significance level using R, SigmaPlot 15, and Primer v7.
+
+
+
+
+## **Results and Conclusion**
+
+![Geographic location](C:\Users\annag\OneDrive - unige.it\Desktop\r_markdown_anna\result.png)
+
+
+
+
+
+
+•	Results and Conclusion Some of the main results and whether the aims were met and what the authors found.
+
+6.	You will also need to include an image/graphic/figure, with a caption. Reference the figure in your text. 
+You can import an image that was used in the original article. Alternatively, you can create your
+ 
+own figure in RMarkdown that can be displayed. This is just to check that you have understood how chunks work, so please do not go overboard. Instead, try and convey a very simple message about the paper - you can use completely fake data for example.
+
+
 
 
 
