@@ -41,11 +41,13 @@ Statistical analyses included square root transformation of variables, hierarchi
 
 ## **Results and Conclusion**
 ```{r}
- plants_df <-read.csv("fake_data.csv")
+ plants_df <- read.csv2("fake_data.csv", header=FALSE)
 head(plants_df)
 library(ggplot2)
-ggplot(plants_df,aes(x=Plots,y=Species_richness)+
-  geom_point()
+
+ggplot(plants_df,aes(x=Plots,y=Species_richness))+
+  geom_point()+
+    theme_light()
 ```
 
 
