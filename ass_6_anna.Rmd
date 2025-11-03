@@ -1,43 +1,41 @@
 
 ---
-title: "R markdown assignment"
+title: "Summary of the Paper: 'Influence of Distance from Forest Edges on Spontaneous Vegetation Succession Following Small-Scale Gold Mining in the Southeast Peruvian Amazon'"
 author: "Anna Gloria Millefanti"
 date: "2025-10-31"
 output: html_document
 ---
-# **Reference**
-Y., Alarcon-Aguirre, G., Herrera-Machaca, M., Hilares Vargas, L., Corvera Gomringer, R., & del Castillo Torres, D. (2023). Influence of Distance from Forest Edges on Spontaneous Vegetation Succession Following Small-Scale Gold Mining in the Southeast Peruvian Amazon. Diversity, 15(6), 793. https://doi.org/10.3390/d15060793
 
-# **Abstract**
+
+# **1.Abstract**
 This article presents an investigation conducted in an abandoned gold mining area in the Peruvian Amazon, aiming to quantify the effects of time on vegetation regeneration, as the sites were abandoned at different moments. The study reveals significant differences in successional stages depending on the abandonment period, showing that natural restoration alone is too slow to rehabilitate the area. Therefore, active restoration measures are recommended to promote effective ecological recovery.
 
-# **Introduction**
+# **2.Introduction**
 
 Mining supports the global economy but causes habitat loss, soil degradation, and threats to biodiversity, especially in the Amazon. In Madre de Dios, Peru, artisanal gold mining (ASGM) is a major driver of environmental disturbance.
 Natural regeneration (spontaneous succession) can restore forests without human intervention. Its success depends on soil quality, seed availability, distance from forest edges, and time since abandonment. Areas closer to forests recover faster and have higher species diversity.
 Chronosequence studies help track succession over time. While secondary succession is well-studied in agricultural lands, research on abandoned gold-mining sites in the Peruvian Amazon is limited. This study examines how distance to forest edges and abandonment time influence early natural regeneration, providing insights for restoration practices.
 
-# **Materials and Methods**
+# **3.Materials and Methods**
 
-## 2.1 Study Area
+## 3.1 Study Area
 The study was conducted in abandoned gold mining areas in the San Jacinto native community, Madre de Dios, southeastern Peruvian Amazon (coordinates: 12°31'34.22" S, 69°23'45.77" W), 35 km northeast of Puerto Maldonado. Average annual temperature is 25.4 °C and precipitation 2120 mm, with a dry season from June to September.  
 
 Twenty abandoned mining areas were selected to establish a 23-year chronosequence, including initial (<5 years), intermediate (5–10 years), and advanced (>10 years) successional stages. Gold extraction involved open-pit mining, removing all vegetation and soil, leading to disturbed substrates with limited natural recolonization. The original forest was low-terrace rainforest with emergent trees up to 45 m, dominated by species such as *Bertholletia excelsa*, *Pseudolmedia laevis*, *Iriartea deltoidea*, *Poulsenia armata*, *Quararibea wittii*, *Astrocaryum murumuru*, and *Euterpe precatoria*.  
 
-![Geographic location](C:\Users\annag\OneDrive - unige.it\Desktop\r_markdown_anna\amazon_pic.png)
+![*Figure 1: Geographic location of the study area in Madre de Dios, Peru.*](C:\Users\annag\OneDrive - unige.it\Desktop\r_markdown_anna\SITE_PIC_CORRECT.png)
 
-*Figure 1: Geographic location of the study area in Madre de Dios, Peru.*
 
-## 2.2 Sampling and Vegetation Structure
+
+## 3.2 Sampling and Vegetation Structure
 Vegetation was sampled in 20 plots (10 × 25 m). All individuals with DBH >1 cm were measured for diameter and total height. Botanical specimens were collected and stored at the Alwyn Gentry Herbarium (HAG).  
-
 Woody plants were classified by development stage: seedlings (1–<5 cm DBH), saplings (5–<10 cm), and trees (>10 cm). Diameter classes (5 cm ranges) and average height were used to describe vegetation structure across the four abandonment stages. Scientific names were verified using TNRS.  
 
-## 2.3 Data Analysis
+## 3.3 Data Analysis
 Statistical analyses included square root transformation of variables, hierarchical partitioning (R package *hier.part*), non-metric multidimensional scaling (nMDS), SIMPROF for floristic grouping, and distance-based redundancy analysis (dbRDA) with variance partitioning (*rdacca.hp* package). All analyses were conducted at a 5% significance level using R, SigmaPlot 15, and Primer v7.
 
 
-# **Results**
+# **4.Results**
 
 The 20 plots evaluated had abandonment times ranging from 2 to 23 years and distances from the forest edge between 35 and 560 m. A total of 931 individuals belonging to 79 species and 30 families were recorded. Species richness and diversity were generally higher in plots with longer abandonment and closer to the forest edge. Fabaceae, Malvaceae, and Urticaceae were the most important families, representing nearly half of the abundance and 70% of relative dominance, while Asteraceae, despite high abundance, showed low dominance.  
 
@@ -46,31 +44,40 @@ The 20 plots evaluated had abandonment times ranging from 2 to 23 years and dist
 plants_df2 <- read.csv("f_data.csv")
 head(plants_df2)
 View(plants_df2)
+
+plants_df2_filtered <- na.omit(plants_df2)
 library(ggplot2)
 
-ggplot(plants_df2,aes(x=Plots,y=Species_richness))+
+
+ggplot(plants_df2_filtered,aes(x=Plots,y=Species_richness))+
   geom_point()+
-    theme_light()
+  theme_light()
 ```
+
+* Figure 2: Species accumulation curve of natural regeneration in study areas.*
+<!-- I was trying to reproduce one graph in the paper but didn't really work. You can find it in gith under the name "graph i was tryin to reproduce with fake data -->
 
 
 Diameter distributions revealed an inverted-J pattern, with most individuals in the <5 cm DBH class; this proportion decreased over time, while larger size classes increased. Pioneer species (*Ochroma pyramidale*, *Cecropia membranacea*) dominated early abandonment plots, whereas later stages saw increased presence of *Ficus*, *Alchornea*, *Inga*, and *Croton*.  
 
+![*Figure 3:The density and average height of individuals according to diameter categories of the
+vegetation in study areas. DBH = diameter at breast height*](C:\Users\annag\OneDrive - unige.it\Desktop\r_markdown_anna\RESULT_PIC_CORRECT.png)
 
-![Geographic location](C:\Users\annag\OneDrive - unige.it\Desktop\r_markdown_anna\result.png)
 
-*Figure 2 :The density and average height of individuals according to diameter categories of the
-vegetation in study areas. DBH = diameter at breast height*
 
 HOF models showed that species responses varied with abandonment and distance to the forest edge: some decreased with distance, others increased with longer abandonment. ANOVA and correlation analyses confirmed that species richness, diversity, and basal area increased with abandonment time and decreased with distance from the forest. Seedling diversity was particularly sensitive to forest proximity, while tree abundance correlated positively with abandonment time. Regression models explained over 60% of variability in richness and abundance, with distance contributing more than abandonment.  
-
 nMDS and dbRDA analyses indicated that floristic composition was structured by both abandonment time and distance to the forest edge, with distance exerting a stronger influence on community composition than abandonment time.
 
-# *Conclusion*
+# **5.Conclusion**
 
 Pioneer species dominate plots with short abandonment, while longer-abandoned plots show more advanced successional species. Natural regeneration after gold mining in San Jacinto is slow and depends on abandonment time and proximity to forest. Given high fragmentation, passive restoration is insufficient, and key species such as *Ochroma pyramidale*, *Ficus*, *Cecropia*, and *Inga* are recommended for active ecological restoration across the degraded areas.
 
- 
+
+# **Reference**
+Y., Alarcon-Aguirre, G., Herrera-Machaca, M., Hilares Vargas, L., Corvera Gomringer, R., & del Castillo Torres, D. (2023). *Influence of Distance from Forest Edges on Spontaneous Vegetation Succession Following Small-Scale Gold Mining in the Southeast Peruvian Amazon.* **Diversity**, 15(6), 793. https://doi.org/10.3390/d15060793 
+
+# **My GitHub link**
+[Link](https://github.com/amille25/r_markdown_anna_ass6)
 
 
 
